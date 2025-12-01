@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Navigation Bar</title>
+        <style>
+            .container{
+                margin-top: 50px;
+                font-size: 20px;
+                background-color: rgb(184, 212, 237);
+                display: flex;
+                align-items: center;
+                height: 50px;
+                color: rgb(25, 3, 107);
+            }
+            .navigation{
+                flex-grow: 1;
+                margin: 20px;
+                justify-items: end;
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-areas: "menu" ;
+            }
+            .menu-bar{
+                display: flex;
+                gap: 30px;
+                grid-area: menu;
+            }
+            .menu-icon{
+                display: none;
+                grid-area: icon;
+            }
+            @media (max-width: 768px) {
+                .navigation{
+                    grid-template-areas: "icon";
+                }
+                .menu-bar{
+                    display: none;
+                }
+                .menu-icon{
+                    display: block;
+                }
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class= "logo">Logo</div>
+            <div class="navigation">
+                <div class="menu-bar">
+                    <div>Home</div>
+                    <div>About</div>
+                    <div>Service</div>
+                    <div>Contact</div>
+                </div>
+                <svg class= "menu-icon" width="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"></path></svg>            </div>
+        </div>
+    </body>
+</html>
