@@ -1,1 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Part2</title>
+    <style>
+      body{
+        background-color: #6131ae;
+      }
+      .container{
+        width: 95%;
+        height: 95vh;
+        margin: 10px 10px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+      }
+      .header{
+        display: flex;
+        color: rgb(66, 10, 84);
+        justify-content: center;
+        align-items: center;
+        background-color: #e2dae8;
+        height: 80px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-weight: bold;
+        font-size: 30px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
 
+      .content{
+        background-color: #fcfbfd;
+        flex-grow: 1;
+      }
+      .grid {
+        color: rgb(112, 0, 112);
+        display: grid;
+        gap: 15px;
+        grid-template-columns: 1fr 1fr;
+        padding: 20px;
+      }
+      .emai, .text{
+        grid-column: 1/ 3 ;
+      }
+      .gender , .hobbie{
+        width: 90%;
+        display: flex;
+
+        gap: 5px;
+      }
+      input, select, textarea{
+        width: 90%;
+
+      }
+      .footer{
+        height: 60px;
+        display: flex;
+        background-color: #e2dae8;
+        justify-content: end;
+        align-items: end;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+      .create{
+        background-color: #845ec2;
+        border: none;
+        color: white;
+        font-size: 14px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        border-radius: 10px;
+        width: 100px;
+        margin: 10px;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div>Create Account</div>
+      </div>
+      <div class="content">
+        <div class="grid">
+        <div class="first-n">First name*<br>
+          <input type="text" >
+        </div>
+        <div class="last-n">Last name<br>
+          <input type="text" >
+        </div>
+        <div class="emai">Email*<br>
+          <input type="email">
+        </div>
+        <div class="password">Password*<br>
+          <input type="password">
+        </div>
+        <div class="confirm">Confirm Password*<br>
+          <input type="password">
+        </div>
+        <div>Gender*<br>
+          <div class="gender">
+          <input type="radio" id="m" name="gender" >
+          <label for="m">Male</label>
+          <input type="radio" id="f" name="gender">
+          <label for="f">Female</label>
+          </div>
+        </div>
+        <div>Hobbies<br>
+          <div class="hobbie">
+          <input type="checkbox">Music
+          <input type="checkbox">Sports
+          <input type="checkbox">Travel
+          <input type="checkbox">Movies
+          </div>
+        </div>
+        <div class="job">Source of Income<br>
+          <select id="Job">
+            <option>Employee</option>
+            <option>Business</option>
+            <option>Student</option>
+          </select>
+        </div>
+        <div class="income">Income($)<br>
+          <input type="range" min="0" max="10000" value="500">
+          <label id="incomeValue">500$</label>
+        </div>
+        <div class="pic">Upload Profile Picture<br>
+          <input type="file" >
+        </div>
+        <div class="age">Age<br>
+          <input type="number" min="1" max="120">
+        </div>
+        <div class="text">
+          <label>Bio<br></label>
+          <textarea rows="5"></textarea>
+        </div>
+      </div>
+      </div>
+      <div class="footer">
+        <button class="create">Create</button>
+      </div>
+    </div>
+  </body>
+
+</html>
