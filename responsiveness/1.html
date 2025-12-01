@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Basics</title>
+        <style>
+            .container{
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                font-family: sans-serif;
+                gap: 20px;
+                padding: 10px;
+            }
+            .box{
+                background-color: skyblue;
+                align-content: center;
+                text-align: center;
+                height: 40px;
+            }
+            @media screen and (max-width: 1000px){
+                .container{
+                    grid-template-columns: repeat(3, 1fr);
+                }
+            }
+            @media screen and (max-width: 768px) and (min-width: 480px) {
+                .container{
+                    grid-template-columns: 1fr 1fr;
+                }
+            }
+            @media screen and (max-width: 480px) {
+                .container{
+                    grid-template-columns: 1fr;
+                }
+                
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="box">item1</div>
+            <div class="box">item2</div>
+            <div class="box">item3</div>
+            <div class="box">item4</div>
+            <div class="box">item5</div>
+            <div class="box">item6</div>
+            <div class="box">item7</div>
+            <div class="box">item8</div>
+            <div class="box">item9</div>
+        </div>
+    </body>
+</html>
